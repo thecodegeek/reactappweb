@@ -53,9 +53,17 @@ export function Navbar() {
   );
 }
 
+export function TodayDate() {
+  const date = new Date();
+  const options: Intl.DateTimeFormatOptions = { weekday: "long" };
+
+  const formattedDate = new Intl.DateTimeFormat("de-DE", options).format(date);
+  return formattedDate;
+}
+
 export function Avatar() {
   const avatar = "https://i.imgur.com/7vQD0fPs.jpg";
-  const description = "Gregorio";
+  const description = TodayDate();
   return (
     <figure className="figure">
       <img
