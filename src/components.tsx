@@ -61,7 +61,7 @@ export function TodayDate() {
   return formattedDate;
 }
 
-export function Avatar() {
+export function Avatar({ person, size }: { size: number; person: any }) {
   const avatar = "https://i.imgur.com/7vQD0fPs.jpg";
   const description = TodayDate();
   return (
@@ -69,9 +69,17 @@ export function Avatar() {
       <img
         src={avatar}
         className="figure-img img-fluid rounded"
-        alt="scientist"
+        alt={person.name}
+        width={size}
+        height={size}
       />
       <figcaption className="figure-caption">{description}</figcaption>
     </figure>
+  );
+}
+
+export function Profile() {
+  return (
+    <Avatar person={{ name: "Lin Lanying", imageId: "1bX5QH6" }} size={100} />
   );
 }

@@ -6,6 +6,6 @@ import { Navbar, Avatar } from "./components";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Navbar />
-    <Avatar />
+    <Avatar size={50} person={{ name: "Lin Lanying", imageId: "1hjfb7x" }} />
   </React.StrictMode>
 );
