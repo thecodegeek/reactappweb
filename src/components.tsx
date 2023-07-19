@@ -63,7 +63,7 @@ export function TodayDate() {
 
 export function Avatar({ person, size }: { size: number; person: any }) {
   const avatar = "https://i.imgur.com/7vQD0fPs.jpg";
-  const description = TodayDate();
+  const description = TodayDate() + person.name;
   return (
     <figure className="figure">
       <img
