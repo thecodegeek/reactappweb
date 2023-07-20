@@ -78,8 +78,18 @@ export function Avatar({ person, size }: { size: number; person: any }) {
   );
 }
 
+export function Card({ children }: { children: any }) {
+  return <div className="card">{children}</div>;
+}
+
 export function Profile() {
   return (
-    <Avatar person={{ name: "Lin Lanying", imageId: "1bX5QH6" }} size={100} />
+    <Card>
+      <Avatar size={100} person={{ name: "lin", imageId: "sciopa" }} />
+    </Card>
   );
+}
+
+export function Item({ name, isPacked }: { name: any; isPacked: any }) {
+  return <li className="list">{isPacked ? name + " ✔" : name}</li>;
 }
